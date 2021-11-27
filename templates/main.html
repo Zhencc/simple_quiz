@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+{% load static %}
+{% block scripts %}
+    <script src="{% static '/js/main.js' %}"></script>
+{% endblock scripts %}
+
+{% block css %}
+    <link href="{% static '/css/main.css' %}" rel="stylesheet" type="text/css">
+{% endblock css %}
+{% block title %}
+    Guess The Capital
+{% endblock title %}
+
+{% block content %}
+    <div class="container">
+        <h1>Guess the Capital!</h1>
+        <div class="question-container">
+            <div id="question"></div>
+        </div>
+        <div id="form-container">
+            <form name="form" id="capital_quiz_form">
+                <label>
+                    <input id="answer" type="text">
+                </label>
+                <button type="submit">Check Answer</button>
+            </form>
+        </div>
+    </div>
+{% endblock content %}
